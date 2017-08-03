@@ -1,0 +1,25 @@
+table, th, td {
+    border: 1px solid black;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+tr {
+    height:25px;
+    vertical-align: bottom;
+}
+th {
+    text-align: left;
+    height: 50px;
+}
+h1 {
+    color: blue;
+    font-family: verdana;
+    font-size: 300%;
+}
+p  {
+    color: black;
+    font-family: courier;
+    font-size: 160%;
+}

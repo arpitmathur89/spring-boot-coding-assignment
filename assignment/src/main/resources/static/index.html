@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Data Entry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="controller.js"></script>
+<body>
+
+
+    <div id="page">
+        <div id="info" align="center">
+            <h1>Employee Records Form</h1>
+        </div>
+
+
+        <div id="addRecord">
+            <h2>Enter the employee id, name and handle</h2>
+            <form name="addform">
+                Employee ID : <input type="text" placeholder="1001" name = "id" id = "id"/><br>
+                Employee Name : <input type="text" placeholder="Ex: John Doe" name = "name" id = "name"/><br>
+                Employee Username : <input type="text" placeholder="john123" name = "username" id = "username"/><br>
+                <br><br>
+                <input type=button value="Add" onclick="addRecord()"/> <br><br>
+            </form>
+        </div>
+
+        <div id="getEmployeeRecords">
+            <h2>Click to get the tabular data of all Employee records</h2>
+            <form name="getform" method="GET" action="getRecord" >
+                <br>
+                <input type=button value="Read All" onclick="getRecords()"/> <br><br>
+            </form>
+
+        </div>
+
+        <div id="deleteEmployee">
+            <h2>Enter the Employee ID to delete record</h2>
+            <form name="delform" method="POST" action="delete" >
+                Enter ID : <input type="text" placeholder="Enter Employee id " name = "del_emp_id" id="del_emp_id"/><br>
+                <br><br>
+                <input type=button value="Delete Data" onclick="deleteRecord()"/> <br><br>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="table" align="center">
+        <div id="table_details" style="display:none">
+            <h3 style="color:black; font-family:verdana">Read all records</h3>
+            <table class = "table" id="empList">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>USERNAME</th>
+                </tr>
+                </thead>
+                <tbody id="topviewedtable">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
